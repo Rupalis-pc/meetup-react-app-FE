@@ -87,7 +87,7 @@ function App() {
         )}
         <div className="row">
           {filteredEvents.map((event) => (
-            <div className="col-md-4 py-4 ps-5" key={event._id}>
+            <div className="col-md-4 py-4" key={event._id}>
               <div className="h-100">
                 <Link
                   to={`/eventDetails/${event._id}`}
