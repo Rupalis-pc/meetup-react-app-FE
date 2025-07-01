@@ -63,15 +63,15 @@ const EventDetails = () => {
             </div>
             <div>
               <h4>Event Tags:</h4>
-              <div className="gap-2 d-md-flex">
+              <div className="d-flex flex-wrap gap-2">
                 {selectedEventData.eventTags.map((tag) => (
                   <button className="btn btn-danger">{tag}</button>
                 ))}
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-6 py-2 ms-auto">
-            <div style={{ width: "70%", float: "right" }}>
+          <div className="col-12 col-md-6 py-2">
+            <div className="w-100 w-md-75 ms-md-auto">
               <div className="card p-4 gap-4 border-0 rounded-2 mb-4">
                 <div className="d-flex align-items-center gap-2">
                   <i className="bi bi-clock"></i>
