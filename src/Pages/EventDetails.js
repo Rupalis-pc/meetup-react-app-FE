@@ -1,6 +1,5 @@
 import Header from "../Components/Header";
 import { useParams } from "react-router-dom";
-import { eventDetails } from "./detailsArr";
 import { useState } from "react";
 import useFetch from "../useFetch";
 
@@ -102,9 +101,14 @@ const EventDetails = () => {
                         <img
                           src={person.imgUrl}
                           className="card-img-top rounded-circle mx-auto d-block"
-                          width="80"
-                          height="80"
+                          style={{
+                            width: "100px",
+                            height: "100px",
+                            objectFit: "cover",
+                          }}
+                          alt={person.name}
                         />
+
                         <div className="card-body">
                           <h6 className="card-title fw-bold mb-0">
                             {person.name}
