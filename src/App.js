@@ -33,47 +33,47 @@ function App() {
     <main className="bg-body-tertiary">
       <Header searchItem={searchItem} setSearchItem={setSearchItem} />
       <div className="container">
-        <div className="row py-2">
-          <div className="d-flex justify-content-between">
+        <div className="row py-2 align-items-center gy-3">
+          <div className="col-12 col-md-6">
             <h1 className="display-5 fw-bold">Meetup Events</h1>
-            <div className="col-2">
-              <div className="dropdown w-100">
-                <button
-                  className="btn border dropdown-toggle w-100 bg-white"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  {selectedEventType}
-                </button>
+          </div>
+          <div className="col-2 col-md-3 ms-md-auto">
+            <div className="dropdown w-100">
+              <button
+                className="btn border dropdown-toggle w-100 bg-white"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {selectedEventType}
+              </button>
 
-                <ul className="dropdown-menu w-100">
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      onClick={() => setSelectedEventType("Both")}
-                    >
-                      Both
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      onClick={() => setSelectedEventType("Offline Event")}
-                    >
-                      Offline Event
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      onClick={() => setSelectedEventType("Online Event")}
-                    >
-                      Online Event
-                    </button>
-                  </li>
-                </ul>
-              </div>
+              <ul className="dropdown-menu w-100">
+                <li>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => setSelectedEventType("Both")}
+                  >
+                    Both
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => setSelectedEventType("Offline Event")}
+                  >
+                    Offline Event
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => setSelectedEventType("Online Event")}
+                  >
+                    Online Event
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ function App() {
         )}
         <div className="row">
           {filteredEvents.map((event) => (
-            <div className="col-md-4 py-4" key={event._id}>
+            <div className="col-12 col-md-6 col-lg-4 py-3" key={event._id}>
               <div className="h-100">
                 <Link
                   to={`/eventDetails/${event._id}`}
