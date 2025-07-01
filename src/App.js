@@ -77,7 +77,14 @@ function App() {
             </div>
           </div>
         </div>
-        {loading && <p>Loading.....</p>}
+        {loading && (
+          <div className="text-center">
+            <div class="spinner-border me-3" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <strong className="fs-5">Loading Events.....</strong>
+          </div>
+        )}
         <div className="row">
           {filteredEvents.map((event) => (
             <div className="col-md-4 py-4 ps-5" key={event._id}>

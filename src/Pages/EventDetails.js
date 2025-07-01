@@ -12,7 +12,18 @@ const EventDetails = () => {
     error,
   } = useFetch(`https://meetup-events-data.vercel.app/events/${eventId}`);
 
-  if (loading) return <p>Loading.....</p>;
+  if (loading)
+    return (
+      <main className="bg-body-tertiary py-2">
+        <Header searchItem={searchItem} setSearchItem={setSearchItem} />
+        <div className="container text-center py-5">
+          <div className="spinner-border mb-3" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <h5>Fetching Event Details...</h5>
+        </div>
+      </main>
+    );
 
   if (error) return <p>Error Loading data, {error}</p>;
 
@@ -22,8 +33,8 @@ const EventDetails = () => {
     <main className="bg-body-tertiary py-2">
       <Header searchItem={searchItem} setSearchItem={setSearchItem} />
       <div className="container">
-        <div className="row">
-          <div className="col-md-6">
+        <div className="row gy-4">
+          <div className="col-12 col-md-6">
             <h1 className="py-2 fw-bold">{selectedEventData.name}</h1>
             <p>
               <span className="text-secondary">Hosted By:</span> <br />
@@ -32,7 +43,7 @@ const EventDetails = () => {
 
             <img
               src={selectedEventData.imgUrl}
-              className="card-img-top py-4"
+              className="img-fluid card-img-top py-4"
               height="450px"
             />
             <div>
@@ -59,7 +70,7 @@ const EventDetails = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 py-2 ms-auto">
+          <div className="col-12 col-md-6 py-2 ms-auto">
             <div style={{ width: "70%", float: "right" }}>
               <div className="card p-4 gap-4 border-0 rounded-2 mb-4">
                 <div className="d-flex align-items-center gap-2">
@@ -93,7 +104,7 @@ const EventDetails = () => {
                 </h4>
                 <div className="row">
                   {selectedEventData.speakers.map((person) => (
-                    <div className="col-md-6">
+                    <div className="col-12 col-sm-6">
                       <div
                         className="card text-center p-3 shadow-sm border-0 mb-3"
                         style={{ borderRadius: "15px", height: "180px" }}
