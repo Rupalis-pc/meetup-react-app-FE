@@ -1,6 +1,6 @@
 # Meetup App
 
-Meetup Events App is a full-stack event management application that allows users to explore upcoming events, view event details, and manage event data. It's built using the MERN stack with a focus on clean UI and structured backend APIs.
+Meetup Events App is a full-stack event management application that allows users to explore upcoming events, view event details. It's built using the MERN stack with a focus on clean UI and structured backend APIs.
 
 ---
 
