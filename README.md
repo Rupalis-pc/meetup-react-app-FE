@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Meetup App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Meetup Events App is a full-stack event management application that allows users to explore upcoming events, view event details, and manage event data. It's built using the MERN stack with a focus on clean UI and structured backend APIs.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Demo Link
 
-### `npm start`
+[Live Demo](https://meetup-react-app-fe.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Quick Start
 
-### `npm test`
+```bash
+git clone https://github.com/Rupalis-pc/meetup-react-app-fe.git
+cd meetup-react-app-fe
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔧 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend:
+- **React.js** with Hooks
+- **React Router** for navigation
+- **Bootstrap** for UI components
+- **Responsive Design**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend:
+- **Node.js** with Express.js
+- **MongoDB** with Mongoose
+- **dotenv** with environment config
+- **CORS** and **Express JSON Middleware**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ✨ Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🗓️ Event Listing
+- View a list of all available events (Online and Offline)
+- Each event card shows name, image, timings and type
+- Clickable cards navigate to detailed view
+- Filter and Search Functionality
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔍 Event Details
+- View full details of a selected event
+- Host, venue, dress code, age restriction info
+- Speaker section with names and titles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### ➕ Add Event
+- Submit new events via POST request to backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🔔 Loading 
+- Loaders while fetching data
+  - Adding/removing items
+  - Moving between cart & wishlist
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠️ API Endpoints
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Events
+- `GET /events` – Fetch all events
+- `GET /events/:id` – Get a single event by ID
+- `POST /events` – Create a new event
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📹 Demo Video
 
-### Analyzing the Bundle Size
+Watch the walkthrough (6mins) of the meetup app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[Loom Demo Video]()
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
+For bugs or feature requests, please reach out to rupalisethiaa@gmail.com
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 👩‍💻 Author
 
-### Deployment
+**Rupali Sethia**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
